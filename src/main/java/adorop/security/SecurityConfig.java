@@ -1,9 +1,6 @@
 package adorop.security;
 
 import adorop.security.authentication.AuthorizationHeaderAuthenticationFilterBuilder;
-import adorop.security.exception.handling.JsonRestAccessDeniedHandler;
-import adorop.security.exception.handling.JsonUnauthorizedEntryPoint;
-import adorop.security.exception.handling.UnauthorizedEntryPoint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
