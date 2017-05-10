@@ -17,6 +17,7 @@ import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.security.web.access.ExceptionTranslationFilter;
 import org.springframework.security.web.context.NullSecurityContextRepository;
+import org.springframework.security.web.savedrequest.NullRequestCache;
 
 import javax.servlet.Filter;
 
@@ -46,6 +47,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .accessDeniedHandler(accessDeniedHandler)
                 .and()
                     .securityContext().securityContextRepository(new NullSecurityContextRepository())
+                .and()
+                    .requestCache().requestCache(new NullRequestCache())
                 .and()
                     .csrf().disable();
     }
