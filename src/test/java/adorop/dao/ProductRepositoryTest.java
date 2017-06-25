@@ -1,5 +1,6 @@
 package adorop.dao;
 
+import adorop.IntegrationTest;
 import adorop.model.Product;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,9 +13,7 @@ import java.math.BigDecimal;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = PersistenceConfig.class)
-public class ProductRepositoryTest {
+public class ProductRepositoryTest extends IntegrationTest {
     @Autowired
     private ProductRepository productRepository;
     @Autowired

@@ -1,5 +1,6 @@
 package adorop.dao;
 
+import adorop.IntegrationTest;
 import adorop.model.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,9 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.junit.Assert.assertSame;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = PersistenceConfig.class)
-public class UserRepositoryTest {
+public class UserRepositoryTest extends IntegrationTest {
     @Autowired
     private UserRepository userRepository;
 

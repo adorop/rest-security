@@ -1,5 +1,6 @@
 package adorop.dao;
 
+import adorop.IntegrationTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,9 +9,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.junit.Assert.assertNotNull;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = PersistenceConfig.class)
-public class AuthenticationTokenRepositoryTest {
+public class AuthenticationTokenRepositoryTest extends IntegrationTest {
     @Autowired
     private AuthenticationTokenRepository authenticationTokenRepository;
 

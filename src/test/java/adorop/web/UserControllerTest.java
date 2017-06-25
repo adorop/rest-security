@@ -1,5 +1,6 @@
 package adorop.web;
 
+import adorop.IntegrationTest;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,11 +18,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-
-@RunWith(SpringJUnit4ClassRunner.class)
-@WebAppConfiguration
-@ContextConfiguration(classes = WebConfig.class)
-public class UserControllerTest {
+public class UserControllerTest extends IntegrationTest {
     @Autowired
     private WebApplicationContext applicationContext;
     private MockMvc mockMvc;
